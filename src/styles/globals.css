@@ -3,25 +3,178 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color-white: var(--light-white);
+  --primary-color-dark: var(--light-white);
+  --primary-color: var(--primary-color-white);
+  --secondary-color-white: hsl(44, 86%, 57%);
+  --secondary-color-dark: hsl(44, 86%, 57%);
+  --secondary-color: var(--secondary-color-white);
+  --tertiary-color-white: hsl(220, 64%, 24%);
+  --tertiary-color-dark: hsl(220, 64%, 24%); 
+  --tertiary-color: var(--tertiary-color-white);
+  --light-white: hsl(0, 27%, 98%);
+  --background-color: --light-white;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --tertiary-color: var(--tertiary-color-dark);
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-color);
+}
+
+#main-page {
+  background-image: url("../../public/coding-mac-landscape-stock.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 70% 100%, 56% 83%, 31% 71%, 17% 49%);
+}
+
+.sidebar {
+  text-align: center;
+  display: grid;
+  opacity: 0.9;
+  color: var(--tertiary-color);
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-color);
+  aspect-ratio: 1/6;
+  width: 58px;
+  border-radius: 6px;
+}
+
+.sec-border {
+  border: 3px solid white;
+  border-radius: 12px;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary-color);
+}
+
+.bg-light-white {
+  background-color: var(--light-white);
+}
+
+.txt-primary {
+  color: var(--primary-color);
+}
+
+.txt-secondary {
+  color: var(--secondary-color);
+}
+
+.txt-tertiary {
+  color: var(--tertiary-color);
+}
+
+.Timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: fit-content;
+}
+
+.Timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  margin-left: -5px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  max-width: 300px;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.right {
+  left: 10%;
+}
+
+.Skills {
+  right: 10px;
+}
+
+.Skills::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: 22px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  rotate: 90deg;
+}
+
+.right::before {
+  content: '';
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  position: relative;
+}
+
+#Intro {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 580px) {
+  .container {
+      max-width: 500px;
+  }
+  .Skills {
+      width: 20%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Skills {
+      width: 12%;
+  }
 }
