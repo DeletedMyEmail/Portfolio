@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faFilter, faHome, faMessage, faDisplay } from '@fortawesome/free-solid-svg-icons'
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
-function SideButton(icon: IconDefinition) {
+function SideButton(icon: IconProp) {
     return (
         <button className='w-full '>
             <FontAwesomeIcon icon={icon} className='w-full'/>
@@ -10,14 +9,10 @@ function SideButton(icon: IconDefinition) {
     )
 }
 
-export default function SideBar() {
+export default function SideBar({icons}: {icons: IconProp[]}) {
     return (
         <div className="sidebar">
-            {SideButton(faSearch)}
-            {SideButton(faFilter)}
-            {SideButton(faMessage)}
-            {SideButton(faDisplay)}
-            {SideButton(faHome)}
+            {icons.map((icon) => SideButton(icon))}
         </div>
     )
 }
