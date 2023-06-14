@@ -6,18 +6,18 @@ function create_tag(name) {
     )
 }
 
-function ProjectItem({title, image, url, tags}) {
+function ProjectItem(props: {title: string, image: string, url: string, tags: string[]}) {
     
     return (
             <a className="ProjectItem relative w-60 h-60 square rounded-lg outline-tertiary p-1 outline outline-offset-4 overflow-clip hover:outline-offset-8"
-               href={url}
+               href={props.url}
                target="_blank"
             >
-                <img className="rounded-lg h-2/3 object-contain object-center m-auto" src={image} alt="project preview"/>
+                <img className="rounded-lg h-2/3 object-contain object-center m-auto" src={props.image} alt="project preview"/>
                 <div className="border-double border-t-4 border-tertiary bg-transparent h-1/3 w-full left-0">
-                    <h1 className="text-xl font-bold py-1.5">{title}</h1>
+                    <h1 className="text-xl font-bold py-1.5">{props.title}</h1>
                     <div className="flex flex-auto space-x-2 mb-2">
-                        {tags.map(function(name) {
+                        {props.tags.map(function(name) {
                             return create_tag(name)
                         })}
                     </div>

@@ -11,7 +11,7 @@
   --secondary-color-white: hsl(44, 86%, 57%);
   --secondary-color-dark: hsl(44, 86%, 57%);
   --secondary-color: var(--secondary-color-white);
-  --tertiary-color-white: hsl(220, 64%, 24%);
+  --tertiary-color-white: hsl(219, 73%, 10%);
   --tertiary-color-dark: hsl(220, 64%, 24%); 
   --tertiary-color: var(--tertiary-color-white);
   
@@ -57,6 +57,8 @@ body {
   aspect-ratio: 1/6;
   width: 58px;
   border-radius: 6px;
+  outline: var(--tertiary-color) solid 2px;
+  z-index: 99;
 }
 
 .bg-primary {
@@ -178,7 +180,7 @@ body {
   z-index: 1;
   left: 30px;
   border-width: 10px 10px 10px 0;
-  border-color: transparent var(--primary-color) transparent transparent;
+  border-color: transparent var(--tertiary-color) transparent transparent;
 }
 
 .right::after {

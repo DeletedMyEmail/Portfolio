@@ -1,22 +1,18 @@
 export default [
     {
         "date": 2024,
-        "description": "Lorem ipsum Lorem ipsum .m Lorem ipsum Lorm Lorem ipsum "
+        "description": "Studium für Elektrotechnik (B. Sc.)"
     },
     {
         "date": 2023,
-        "description": "Lorem ipsum Lorem ipsum .m Lorem ipsum Lorm Lorem ipsum Lorem ipsumm Lorem ipsum"
+        "description": "Abitur - 1,8"
     },
     {
         "date": 2022,
-        "description": ".Lorem ipsum Lorem ipsum .m Lorem ipsum Lorm Lorem ipsum Lorem ipsumm Lorem ipsum"
+        "description": "Praktikum im Web Development"
     },
     {
         "date": 2021,
-        "description": "orem  Lorem ipsum Lorm Lorem ipsum Lorem ipsumm Lorem ipsum"
-    },
-    {
-        "date": 2020,
-        "description": ""
+        "description": "Gesamte Freizeit verbrannt, um Programmieren als Hobby zu entdecken"
     }
 ]

@@ -1,20 +1,20 @@
 export default  [
     {
-        "title":"Title",
+        "title":"Messenger",
         "repo_url":"https://github.com/KaitoKunTatsu/KMesRework",
-        "image":"",
-        "tags": ["Java(FX)", "Networks", "Security"]
+        "image":"homescreen.png",
+        "tags": ["Java(FX)", "Networking", "Security"]
     },
     {
-        "title":"Title",
+        "title":"Discord Bot",
         "repo_url":"https://github.com/KaitoKunTatsu/SchroedingersCat",
-        "image":"",
-        "tags": ["Databases", "Discord", "Automation"]
+        "image":"catbot.png",
+        "tags": ["Databases", "APIs", "Automation"]
     },
     {
-        "title":"Title",
+        "title":"Java Library",
         "repo_url":"https://github.com/KaitoKunTatsu/KLibrary",
-        "image":"",
+        "image":"klib_logo.png",
         "tags": ["Encryption", "SQL", "Datastructures"]
     }
 ]
