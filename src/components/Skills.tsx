@@ -3,7 +3,7 @@ import React from 'react'
 function Skills() {
 
     return (
-        <div className={"Skills h-3/5 mt-16 bg-neutral-200 rounded-lg border-2 border-white z-30 absolute p-3 columns-3"}>
+        <div className={"Skills h-3/5 mt-16 w-full bg-neutral-200 rounded-lg border-2 border-white z-30 absolute p-3 columns-3"}>
             <div>
                 <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a>
                 <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>

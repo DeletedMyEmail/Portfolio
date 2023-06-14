@@ -1,14 +1,15 @@
 import React from 'react'
 import Skills from './Skills'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function SkillsToggler() {
     const [show, setShow] = React.useState(false);
 
     return (
-        <div className="SkillsIcon w-1/4 h-fit ml-auto">
-            <i className="fa-regular fa-2x fa-star float-right p-5 inline" onClick={() => setShow(currentShow => !currentShow)}/>
-            { show ? <Skills/> : null }
-        </div>
+        <button className='w-full' onClick={() => setShow(currentShow => !currentShow)}>
+            <FontAwesomeIcon icon={faCode} className='w-full'/>
+        </button>
     )
 }
 
