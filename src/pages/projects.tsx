@@ -3,19 +3,23 @@ import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import { faCodeBranch, faCode, faHome, faMessage } from '@fortawesome/free-solid-svg-icons'
 import Router from 'next/router';
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div id="main-page" className="w-full h-screen pt-20 bg-primary">
-      <SideBar elements={[ 
-        {icon: faCode, clickEvent: () => {} },
-        {icon: faCodeBranch, clickEvent: () => {Router.push("/projects")} },
-        {icon: faMessage, clickEvent: () => {Router.push("/contact")} },
-        {icon: faHome, clickEvent: () => {Router.push("/")} },
-       ]}/>
-      
-      <Projects/>
-      <Intro name="" title="Experience and Projects" description="Anim laboris veniam incididunt sunt esse nulla dolor ea culpa ipsum reprehenderit exercitation sit. Incididunt elit aliqua id sunt nulla pariatur. Excepteur sit amet do enim aliquip sit esse commodo officia esse irure eu non laboris. Excepteur exercitation officia enim minim proident id laboris. Incididunt irure qui Lorem exercitation anim commodo nostrud fugiat eu pariatur incididunt esse amet ullamco. Proident fugiat do adipisicing ad cupidatat voluptate excepteur cillum proident qui est reprehenderit consectetur. Lorem ex consequat cupidatat qui ea laborum id."/>
+    <div id="projects-page" className="w-full h-screen text-center flex bg-primary">
+      <div className="rounded-2xl pt-14 w-9/12 aspect-16-9 m-auto bg-opacity-95 bg-white">
+        <SideBar elements={[ 
+          {icon: faCode, clickEvent: () => {} },
+          {icon: faCodeBranch, clickEvent: () => {Router.push("/projects")} },
+          {icon: faMessage, clickEvent: () => {Router.push("/contact")} },
+          {icon: faHome, clickEvent: () => {Router.push("/")} },
+        ]}/>
+        
+        <Projects/>
+        <Intro name="" title="Experience and Projects" description={["Tempor deserunt commodo nostrud dolor est minim ex occaecat culpa consequat ullamco eu. Cupidatat adipisicing ea nulla laboris Lorem anim Lorem culpa in consectetur ea ipsum. Amet enim enim ut excepteur sit nisi in esse aute laboris culpa. Nostrud ea est ad voluptate Lorem dolore labore duis. Ullamco officia adipisicing nulla irure.","Ad cupidatat duis do sit aute aliquip magna non incididunt Lorem ea commodo esse. Veniam ex ullamco sit ea esse. Esse cupidatat sint fugiat incididunt laboris eiusmod aute occaecat sunt. Aliqua aute Lorem elit magna nisi laborum exercitation."]}/>
+        <img className="mx-auto mt-16 p-2 border-tertiary border-4 rounded-xl" alt="" src="https://skillicons.dev/icons?i=java,cpp,kotlin,py,bash,css,html,js,github,git,linux,maven,mysql,react,tailwind"/>
+      </div>
     </div>
   )
 }

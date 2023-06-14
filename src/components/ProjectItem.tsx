@@ -1,6 +1,6 @@
 import React from 'react'
 
-function create_tag(name) {
+function create_tag(name: string) {
     return (
         <h2 className="rounded-lg border-tertiary p-1 txt-tertiary border-solid border-2 text-sm">{name}</h2>
     )

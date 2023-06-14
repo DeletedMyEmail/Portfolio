@@ -35,6 +35,12 @@ body {
   background-color: var(--background-color);
 }
 
+#projects-page {
+  background-image: url("../../public/esp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #top {
   background-image: url("../../public/coding-mac-landscape-stock.jpg");
   background-size: cover;
@@ -61,20 +67,24 @@ body {
   z-index: 99;
 }
 
+.aspect-16-9 {
+  aspect-ratio: 16/9;
+}
+
 .bg-primary {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color / var(--tw-bg-opacity));
 }
 
 .bg-secondary {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color / var(--tw-bg-opacity));
 }
 
 .bg-tertiary {
-  background-color: var(--tertiary-color);
+  background-color: var(--tertiary-color / var(--tw-bg-opacity));
 }
 
 .bg-light-white {
-  background-color: var(--light-white);
+  background-color: var(--light-white / var(--tw-bg-opacity));
 }
 
 .border-primary {
