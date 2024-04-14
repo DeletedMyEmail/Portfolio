@@ -1,7 +1,7 @@
 export default [
     {
         "date": 2024,
-        "description": "Studium für Elektrotechnik (B. Sc.)"
+        "description": "Studium der technischen Informatik (B. Sc.)"
     },
     {
         "date": 2023,

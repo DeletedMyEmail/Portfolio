@@ -3,18 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --light-white: hsl(0, 27%, 98%);
+  --light-white: #f3efef;
+
   --background-color: var(--light-white);
+  
   --primary-color-white: var(--light-white);
   --primary-color-dark: var(--light-white);
   --primary-color: var(--primary-color-white);
-  --secondary-color-white: hsl(44, 86%, 57%);
-  --secondary-color-dark: hsl(44, 86%, 57%);
-  --secondary-color: var(--secondary-color-white);
-  --tertiary-color-white: hsl(219, 73%, 10%);
-  --tertiary-color-dark: hsl(220, 64%, 24%); 
-  --tertiary-color: var(--tertiary-color-white);
   
+  --secondary-color-white: #666562;
+  --secondary-color-dark: #666562;
+  --secondary-color: var(--secondary-color-white);
+  
+  --tertiary-color-white: hsl(150, 7%, 37%); 
+  --tertiary-color-dark: hsl(150, 7%, 37%); 
+  --tertiary-color: var(--tertiary-color-white);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,11 +31,15 @@
 body {
   background-color: var(--background-color);
   color: var(--primary-color);
+  overflow-y: scroll;
 }
 
 #main-page {
   text-align: center;
-  background-color: var(--background-color);
+}
+
+.contacts {
+  background: linear-gradient(105deg, var(--secondary-color) 50%, var(--background-color) 50%);
 }
 
 #projects-page {
@@ -47,6 +54,13 @@ body {
   background-repeat: no-repeat;
   clip-path: polygon(12% 0, 100% 0, 100% 100%, 70% 100%, 56% 83%, 31% 71%, 17% 49%);
   height: 100vh;
+}
+
+@media screen and (max-width: 499px) {
+  #top {
+    clip-path: polygon(3.75% 0%, 100% 0%, 100% 82.32%, 51.85% 74.05%, 12.37% 45.27%);
+    height: 60vh;
+  }
 }
 
 .sidebar {
